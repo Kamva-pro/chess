@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ChessApp",
+            "request": "launch",
+            "mainClass": "com.genuineappsgroup/com.genuineappsgroup.ChessApp",
+            "projectName": "chess"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chess",
+            "request": "launch",
+            "mainClass": "Chess",
+            "vmArgs": "--module-path lib/javafx-sdk-22.0.1/lib --add-modules javafx.controls",
+            "preLaunchTask": "build"
+        }
+    ]
+}
