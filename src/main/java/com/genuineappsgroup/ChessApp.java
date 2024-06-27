@@ -2,6 +2,7 @@ package com.genuineappsgroup;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.scene.Cursor;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -39,11 +40,11 @@ public class ChessApp extends Application {
 
         VBox initialLayout = new VBox(10, playerOneField, playerTwoField, startButton);
         initialLayout.setPadding(new Insets(20));
-        // initialLayout.setLayoutX(100);
-        // initialLayout.setLayoutY(100);
+        initialLayout.setLayoutX(100);
+        initialLayout.setLayoutY(100);
 
         Group initialRoot = new Group(initialLayout);
-        Scene initialScene = new Scene(initialRoot, 400, 300);
+        Scene initialScene = new Scene(initialRoot, 400, 200);
         primaryStage.setScene(initialScene);
         primaryStage.show();
     }
@@ -133,6 +134,16 @@ public class ChessApp extends Application {
         ImageView pieceView = new ImageView(pieceImage);
         pieceView.setFitWidth(85);
         pieceView.setFitHeight(85);
+        
+        // Add hover effect and cursor change
+        pieceView.setOnMouseEntered(event -> {
+            pieceView.setOpacity(0.7); // Make the piece slightly transparent
+            pieceView.setCursor(Cursor.HAND); // Change cursor to hand
+        });
+        pieceView.setOnMouseExited(event -> {
+            pieceView.setOpacity(1.0); // Restore original opacity
+        });
+
         chessboard.add(pieceView, col, row);
     }
 
