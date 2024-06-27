@@ -41,10 +41,10 @@ public class ChessApp extends Application {
         VBox initialLayout = new VBox(10, playerOneField, playerTwoField, startButton);
         initialLayout.setPadding(new Insets(20));
         initialLayout.setLayoutX(100);
-        initialLayout.setLayoutY(100);
+        // initialLayout.setLayoutY(100);
 
         Group initialRoot = new Group(initialLayout);
-        Scene initialScene = new Scene(initialRoot, 400, 200);
+        Scene initialScene = new Scene(initialRoot, 400, 250);
         primaryStage.setScene(initialScene);
         primaryStage.show();
     }
@@ -137,7 +137,7 @@ public class ChessApp extends Application {
         
         // Add hover effect and cursor change
         pieceView.setOnMouseEntered(event -> {
-            pieceView.setOpacity(0.7); // Make the piece slightly transparent
+            pieceView.setOpacity(0.5); // Make the piece slightly transparent
             pieceView.setCursor(Cursor.HAND); // Change cursor to hand
         });
         pieceView.setOnMouseExited(event -> {

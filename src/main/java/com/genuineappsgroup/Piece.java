@@ -17,5 +17,10 @@ public abstract class Piece {
     public abstract boolean isValidMove(int newX, int newY);   
     public abstract void move();
 
+
+    
+
+    // Getters and setters for x, y, isWhite
+    // Methods for drawing/rendering the piece on the GUI
 }
 
