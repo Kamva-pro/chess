@@ -14,9 +14,13 @@ public abstract class Piece {
     public abstract boolean is_blocked();
     public abstract boolean is_check();
     public abstract boolean is_opening();
+    public abstract boolean isValidMove(int newX, int newY);   
+    public abstract void move();
 
-    public abstract boolean isValidMove(int newX, int newY);
+
+    
 
     // Getters and setters for x, y, isWhite
     // Methods for drawing/rendering the piece on the GUI
 }
+

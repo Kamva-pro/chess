@@ -30,5 +30,14 @@ public class Bishop extends Piece {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'isValidMove'");
     }
+
+    @Override 
+    public void move()
+    {
+        if(isValidMove(0, 0))
+        {
+            move();
+        }
+    }
     
 }

@@ -30,5 +30,11 @@ public class King extends Piece {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'is_opening'");
     }
+
+    @Override
+    public void move() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'move'");
+    }
     
 }

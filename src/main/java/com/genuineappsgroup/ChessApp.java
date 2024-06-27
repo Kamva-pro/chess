@@ -13,21 +13,22 @@ public class ChessApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Group root = new Group();
-        Scene scene = new Scene(root, 400, 400);
+        Scene scene = new Scene(root, 1360, 740);
 
         // Create a chessboard grid
         GridPane chessboard = new GridPane();
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
-                Rectangle square = new Rectangle(50, 50, (row + col) % 2 == 0 ? Color.WHITE : Color.LIGHTGRAY);
+                Rectangle square = new Rectangle(93,93, (row + col) % 2 == 0 ? Color.BLACK : Color.LIGHTGREEN);
                 chessboard.add(square, col, row);
+                
             }
         }
 
         // Example: Create and place a pawn on the board
-        Pawn pawn = new Pawn(1, 1, true);
-        Rectangle pawnShape = new Rectangle(50, 50, Color.RED);
-        chessboard.add(pawnShape, pawn.getX(), pawn.getY());
+        // Pawn pawn = new Pawn(1, 1, true);
+        // Rectangle pawnShape = new Rectangle(50, 50, Color.RED);
+        // chessboard.add(pawnShape, pawn.getX(), pawn.getY());
 
         root.getChildren().add(chessboard);
         primaryStage.setScene(scene);

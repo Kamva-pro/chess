@@ -16,7 +16,6 @@ public class Queen extends Piece {
 
     @Override
     public boolean is_check() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'is_check'");
     }
 
@@ -30,6 +29,12 @@ public class Queen extends Piece {
     public boolean isValidMove(int newX, int newY) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'isValidMove'");
+    }
+
+    @Override
+    public void move() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'move'");
     }
     
 }

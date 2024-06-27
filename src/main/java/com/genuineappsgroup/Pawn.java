@@ -40,5 +40,9 @@ public class Pawn extends Piece {
         throw new UnsupportedOperationException("Unimplemented method 'is_opening'");
     }
     
+    @Override
+    public void move(){
+        if (isValidMove(x, y)) move();
+    }
     // Additional methods specific to pawn behavior
 }
