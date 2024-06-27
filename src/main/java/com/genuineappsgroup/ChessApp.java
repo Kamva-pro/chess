@@ -1,12 +1,18 @@
 package com.genuineappsgroup;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class ChessApp extends Application {
@@ -20,35 +26,52 @@ public class ChessApp extends Application {
         GridPane chessboard = new GridPane();
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
-                Rectangle square = new Rectangle(93,93, (row + col) % 2 == 0 ? Color.BLACK : Color.LIGHTGREEN);
+                Rectangle square = new Rectangle(93, 93, (row + col) % 2 == 0 ? Color.BEIGE : Color.YELLOWGREEN);
                 chessboard.add(square, col, row);
-                
             }
         }
 
-        // Load the piece images
-        Image whitePawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white_pawn.png").toExternalForm());
-        Image blackPawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black_pawn.png").toExternalForm());
+        initializeBoard(chessboard);
 
-        // Create and place a pawn on the board
-        ImageView whitePawnView = new ImageView(whitePawnImage);
-        whitePawnView.setFitWidth(50);
-        whitePawnView.setFitHeight(50);
-        chessboard.add(whitePawnView, 0, 6); // Place white pawn at initial position (row 6, column 0)
+        // Create labels
+        Label gameNameLabel = new Label("Chess Game");
+        gameNameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
+        Label player1Label = new Label("Player 1: Alice");
+        player1Label.setFont(Font.font("Arial", 18));
+        Label player2Label = new Label("Player 2: Bob");
+        player2Label.setFont(Font.font("Arial", 18));
 
-        ImageView blackPawnView = new ImageView(blackPawnImage);
-        blackPawnView.setFitWidth(50);
-        blackPawnView.setFitHeight(50);
-        chessboard.add(blackPawnView, 0, 1); // 
+        // Create a VBox to hold the labels
+        VBox infoBox = new VBox(10, gameNameLabel, player1Label, player2Label);
+        infoBox.setPadding(new Insets(20));
+        infoBox.setLayoutX(750);  // Position to the right of the chessboard
+        infoBox.setLayoutY(100);  // Position a bit down from the top
 
-        // Example: Create and place a pawn on the board
-        // Pawn pawn = new Pawn(1, 1, true);
-        // Rectangle pawnShape = new Rectangle(50, 50, Color.RED);
-        // chessboard.add(pawnShape, pawn.getX(), pawn.getY());
-
-        root.getChildren().add(chessboard);
+        root.getChildren().addAll(chessboard, infoBox);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    private void initializeBoard(GridPane chessboard) {
+        // Load the piece images
+        Image whitePawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-pawn.png").toExternalForm());
+        Image blackPawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-pawn.png").toExternalForm());
+
+        // Place white pawns
+        for (int col = 0; col < 8; col++) {
+            ImageView whitePawnView = new ImageView(whitePawnImage);
+            whitePawnView.setFitWidth(85);
+            whitePawnView.setFitHeight(85);
+            chessboard.add(whitePawnView, col, 6); // Place white pawns at row 6
+        }
+
+        // Place black pawns
+        for (int col = 0; col < 8; col++) {
+            ImageView blackPawnView = new ImageView(blackPawnImage);
+            blackPawnView.setFitWidth(85);
+            blackPawnView.setFitHeight(85);
+            chessboard.add(blackPawnView, col, 1); // Place black pawns at row 1
+        }
     }
 
     public static void main(String[] args) {
