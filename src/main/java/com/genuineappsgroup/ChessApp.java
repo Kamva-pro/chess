@@ -39,11 +39,11 @@ public class ChessApp extends Application {
 
         VBox initialLayout = new VBox(10, playerOneField, playerTwoField, startButton);
         initialLayout.setPadding(new Insets(20));
-        initialLayout.setLayoutX(100);
-        initialLayout.setLayoutY(100);
+        // initialLayout.setLayoutX(100);
+        // initialLayout.setLayoutY(100);
 
         Group initialRoot = new Group(initialLayout);
-        Scene initialScene = new Scene(initialRoot, 600, 600);
+        Scene initialScene = new Scene(initialRoot, 400, 300);
         primaryStage.setScene(initialScene);
         primaryStage.show();
     }
@@ -87,21 +87,53 @@ public class ChessApp extends Application {
         Image whitePawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-pawn.png").toExternalForm());
         Image blackPawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-pawn.png").toExternalForm());
 
-        // Place white pawns
+        Image whiteRookImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-rook.png").toExternalForm());
+        Image blackRookImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-rook.png").toExternalForm());
+
+        Image whiteKnightImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-knight.png").toExternalForm());
+        Image blackKnightImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-knight.png").toExternalForm());
+
+        Image whiteBishopImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-bishop.png").toExternalForm());
+        Image blackBishopImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-bishop.png").toExternalForm());
+
+        Image whiteQueenImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-queen.png").toExternalForm());
+        Image blackQueenImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-queen.png").toExternalForm());
+
+        Image whiteKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-king.png").toExternalForm());
+        Image blackKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-king.png").toExternalForm());
+
+        // Place white pieces
+        placePiece(chessboard, whiteRookImage, 0, 7);
+        placePiece(chessboard, whiteRookImage, 7, 7);
+        placePiece(chessboard, whiteKnightImage, 1, 7);
+        placePiece(chessboard, whiteKnightImage, 6, 7);
+        placePiece(chessboard, whiteBishopImage, 2, 7);
+        placePiece(chessboard, whiteBishopImage, 5, 7);
+        placePiece(chessboard, whiteQueenImage, 3, 7);
+        placePiece(chessboard, whiteKingImage, 4, 7);
         for (int col = 0; col < 8; col++) {
-            ImageView whitePawnView = new ImageView(whitePawnImage);
-            whitePawnView.setFitWidth(85);
-            whitePawnView.setFitHeight(85);
-            chessboard.add(whitePawnView, col, 6); // Place white pawns at row 6
+            placePiece(chessboard, whitePawnImage, col, 6);
         }
 
-        // Place black pawns
+        // Place black pieces
+        placePiece(chessboard, blackRookImage, 0, 0);
+        placePiece(chessboard, blackRookImage, 7, 0);
+        placePiece(chessboard, blackKnightImage, 1, 0);
+        placePiece(chessboard, blackKnightImage, 6, 0);
+        placePiece(chessboard, blackBishopImage, 2, 0);
+        placePiece(chessboard, blackBishopImage, 5, 0);
+        placePiece(chessboard, blackQueenImage, 3, 0);
+        placePiece(chessboard, blackKingImage, 4, 0);
         for (int col = 0; col < 8; col++) {
-            ImageView blackPawnView = new ImageView(blackPawnImage);
-            blackPawnView.setFitWidth(85);
-            blackPawnView.setFitHeight(85);
-            chessboard.add(blackPawnView, col, 1); // Place black pawns at row 1
+            placePiece(chessboard, blackPawnImage, col, 1);
         }
+    }
+
+    private void placePiece(GridPane chessboard, Image pieceImage, int col, int row) {
+        ImageView pieceView = new ImageView(pieceImage);
+        pieceView.setFitWidth(85);
+        pieceView.setFitHeight(85);
+        chessboard.add(pieceView, col, row);
     }
 
     public static void main(String[] args) {
