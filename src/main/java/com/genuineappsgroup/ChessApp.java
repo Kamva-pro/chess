@@ -95,7 +95,15 @@ public class ChessApp extends Application {
         Pawn hPawn = new Pawn(7, 1, true);
 
         //Initialize the black pawns
-        Pawn aPawnBlack = new Pawn(1, 1, true);
+        Pawn aPawnBlack = new Pawn(0, 6, false);
+        Pawn bPawnBlack = new Pawn(1, 6, false);
+        Pawn cPawnBlack = new Pawn(2, 6, false);
+        Pawn dPawnBlack = new Pawn(3, 6, false);
+        Pawn ePawnBlack = new Pawn(4, 6, false);
+        Pawn fPawnBlack = new Pawn(5, 6, false);
+        Pawn gPawnBlack = new Pawn(6, 6, false);
+        Pawn hPawnBlack = new Pawn(7, 6, false);
+        
         // Load the piece images
         Image whitePawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-pawn.png").toExternalForm());
         Image blackPawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-pawn.png").toExternalForm());
