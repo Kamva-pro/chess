@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -17,8 +19,36 @@ import javafx.stage.Stage;
 
 public class ChessApp extends Application {
 
+    private String playerOneName;
+    private String playerTwoName;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+        // Initial screen with text fields for usernames
+        TextField playerOneField = new TextField();
+        playerOneField.setPromptText("Enter Player 1 Name");
+        TextField playerTwoField = new TextField();
+        playerTwoField.setPromptText("Enter Player 2 Name");
+
+        Button startButton = new Button("Start Game");
+        startButton.setOnAction(e -> {
+            playerOneName = playerOneField.getText();
+            playerTwoName = playerTwoField.getText();
+            startGame(primaryStage);
+        });
+
+        VBox initialLayout = new VBox(10, playerOneField, playerTwoField, startButton);
+        initialLayout.setPadding(new Insets(20));
+        initialLayout.setLayoutX(100);
+        initialLayout.setLayoutY(100);
+
+        Group initialRoot = new Group(initialLayout);
+        Scene initialScene = new Scene(initialRoot, 600, 600);
+        primaryStage.setScene(initialScene);
+        primaryStage.show();
+    }
+
+    private void startGame(Stage primaryStage) {
         Group root = new Group();
         Scene scene = new Scene(root, 1360, 740);
 
@@ -35,11 +65,11 @@ public class ChessApp extends Application {
 
         // Create labels
         Label gameNameLabel = new Label("Chess Game");
-        gameNameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
-        Label player1Label = new Label("Player 1: Alice");
-        player1Label.setFont(Font.font("Arial", 18));
-        Label player2Label = new Label("Player 2: Bob");
-        player2Label.setFont(Font.font("Arial", 18));
+        gameNameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 48));
+        Label player1Label = new Label("Player 1: " + playerOneName);
+        player1Label.setFont(Font.font("Arial", 24));
+        Label player2Label = new Label("Player 2: " + playerTwoName);
+        player2Label.setFont(Font.font("Arial", 24));
 
         // Create a VBox to hold the labels
         VBox infoBox = new VBox(10, gameNameLabel, player1Label, player2Label);
