@@ -84,6 +84,18 @@ public class ChessApp extends Application {
     }
 
     private void initializeBoard(GridPane chessboard) {
+        //Initialize the white pawns
+        Pawn aPawn = new Pawn(0, 1, true);
+        Pawn bPawn = new Pawn(1, 1, true);
+        Pawn cPawn = new Pawn(2, 1, true);
+        Pawn dPawn = new Pawn(3, 1, true);
+        Pawn ePawn = new Pawn(4, 1, true);
+        Pawn fPawn = new Pawn(5, 1, true);
+        Pawn gPawn = new Pawn(6, 1, true);
+        Pawn hPawn = new Pawn(7, 1, true);
+
+        //Initialize the black pawns
+        Pawn aPawnBlack = new Pawn(1, 1, true);
         // Load the piece images
         Image whitePawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-pawn.png").toExternalForm());
         Image blackPawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-pawn.png").toExternalForm());
