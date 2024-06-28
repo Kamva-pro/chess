@@ -144,8 +144,8 @@ public class ChessApp extends Application {
         // Place white pieces
         placePiece(chessboard, aRook.image, aRook.x, aRook.x);
         placePiece(chessboard, aRook.image, hRook.x, hRook.x);
-        placePiece(chessboard, whiteKnightImage, 1, 7);
-        placePiece(chessboard, whiteKnightImage, 6, 7);
+        placePiece(chessboard, bKnight.image, bKnight.x, bKnight.y);
+        placePiece(chessboard, gKnight.image, gKnight.x, gKnight.y);
         placePiece(chessboard, whiteBishopImage, 2, 7);
         placePiece(chessboard, whiteBishopImage, 5, 7);
         placePiece(chessboard, whiteQueenImage, 3, 7);
@@ -164,8 +164,8 @@ public class ChessApp extends Application {
         // Place black pieces
         placePiece(chessboard, aRookBlack.image, aRookBlack.x, aRookBlack.y);
         placePiece(chessboard, hRookBlack.image, hRookBlack.x, hRookBlack.y);
-        placePiece(chessboard, blackKnightImage, 1, 0);
-        placePiece(chessboard, blackKnightImage, 6, 0);
+        placePiece(chessboard, bKnightBlack.image, bKnightBlack.x, bKnightBlack.y);
+        placePiece(chessboard, gKnightBlack.image, gKnightBlack.x, gKnightBlack.y);
         placePiece(chessboard, blackBishopImage, 2, 0);
         placePiece(chessboard, blackBishopImage, 5, 0);
         placePiece(chessboard, blackQueenImage, 3, 0);
