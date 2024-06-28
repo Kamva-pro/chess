@@ -104,24 +104,24 @@ public class ChessApp extends Application {
         Image blackKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-king.png").toExternalForm());
 
          //Initialize the white pawns
-         Pawn aPawn = new Pawn(0, 1, true, whitePawnImage);
-         Pawn bPawn = new Pawn(1, 1, true, whitePawnImage);
-         Pawn cPawn = new Pawn(2, 1, true, whitePawnImage);
-         Pawn dPawn = new Pawn(3, 1, true, whitePawnImage);
-         Pawn ePawn = new Pawn(4, 1, true, whitePawnImage);
-         Pawn fPawn = new Pawn(5, 1, true, whitePawnImage);
-         Pawn gPawn = new Pawn(6, 1, true, whitePawnImage);
-         Pawn hPawn = new Pawn(7, 1, true, whitePawnImage);
+         Pawn aPawn = new Pawn(0, 6, true, whitePawnImage);
+         Pawn bPawn = new Pawn(1, 6, true, whitePawnImage);
+         Pawn cPawn = new Pawn(2, 6, true, whitePawnImage);
+         Pawn dPawn = new Pawn(3, 6, true, whitePawnImage);
+         Pawn ePawn = new Pawn(4, 6, true, whitePawnImage);
+         Pawn fPawn = new Pawn(5, 6, true, whitePawnImage);
+         Pawn gPawn = new Pawn(6, 6, true, whitePawnImage);
+         Pawn hPawn = new Pawn(7, 6, true, whitePawnImage);
  
          //Initialize the black pawns
-         Pawn aPawnBlack = new Pawn(0, 6, false, blackPawnImage);
-         Pawn bPawnBlack = new Pawn(1, 6, false, blackPawnImage);
-         Pawn cPawnBlack = new Pawn(2, 6, false, blackPawnImage);
-         Pawn dPawnBlack = new Pawn(3, 6, false, blackPawnImage);
-         Pawn ePawnBlack = new Pawn(4, 6, false, blackPawnImage);
-         Pawn fPawnBlack = new Pawn(5, 6, false, blackPawnImage);
-         Pawn gPawnBlack = new Pawn(6, 6, false, blackPawnImage);
-         Pawn hPawnBlack = new Pawn(7, 6, false, blackPawnImage);
+         Pawn aPawnBlack = new Pawn(0, 1, false, blackPawnImage);
+         Pawn bPawnBlack = new Pawn(1, 1, false, blackPawnImage);
+         Pawn cPawnBlack = new Pawn(2, 1, false, blackPawnImage);
+         Pawn dPawnBlack = new Pawn(3, 1, false, blackPawnImage);
+         Pawn ePawnBlack = new Pawn(4, 1, false, blackPawnImage);
+         Pawn fPawnBlack = new Pawn(5, 1, false, blackPawnImage);
+         Pawn gPawnBlack = new Pawn(6, 1, false, blackPawnImage);
+         Pawn hPawnBlack = new Pawn(7, 1, false, blackPawnImage);
 
          //initialize the white rooks
          Rook aRook = new Rook(0, 7, true, whiteRookImage);
@@ -159,8 +159,8 @@ public class ChessApp extends Application {
          King bKing = new King(4, 0, false, blackKingImage);
          
         // Place white pieces
-        placePiece(chessboard, aRook.image, aRook.x, aRook.x);
-        placePiece(chessboard, aRook.image, hRook.x, hRook.x);
+        placePiece(chessboard, aRook.image, aRook.x, aRook.y);
+        placePiece(chessboard, hRook.image, hRook.x, hRook.y);
         placePiece(chessboard, bKnight.image, bKnight.x, bKnight.y);
         placePiece(chessboard, gKnight.image, gKnight.x, gKnight.y);
         placePiece(chessboard, cBishop.image, cBishop.x, cBishop.y);
@@ -169,7 +169,7 @@ public class ChessApp extends Application {
         placePiece(chessboard, wKing.image, wKing.x, wKing.y);
         
         //place the white pawns on the board
-        placePiece(chessboard, aPawn.image, aPawn.x, aPawn.y);
+        placePiece(chessboard, aPawn.image, 0, 6);
         placePiece(chessboard, bPawn.image, bPawn.x, bPawn.y);
         placePiece(chessboard, cPawn.image, cPawn.x, cPawn.y);
         placePiece(chessboard, dPawn.image, dPawn.x, dPawn.y);

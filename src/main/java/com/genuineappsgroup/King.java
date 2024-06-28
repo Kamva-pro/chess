@@ -9,6 +9,29 @@ public class King extends Piece {
     boolean isWhite;
     public King(int x, int y, boolean isWhite, Image image) {
         super(x, y, isWhite, image);
+        this.x = x;
+        this.y = y;
+        this.image = image;
+    }
+
+    public void setX(int currentX) {
+        this.x = currentX;
+    }
+
+    public void setY(int currentY) {
+        this.y = currentY;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public Image getImage() {
+        return this.image;
     }
 
     @Override

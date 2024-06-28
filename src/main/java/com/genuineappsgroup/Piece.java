@@ -15,6 +15,16 @@ public abstract class Piece {
         this.image = image;
     }
 
+    public void setX(int currentX)
+    {
+        this.x = currentX;
+    }
+
+    public void setY(int currentY)
+    {
+        this.y = currentY;
+    }
+
     public int getX(){
         return this.x;
     }

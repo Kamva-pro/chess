@@ -8,8 +8,32 @@ public class Rook extends Piece{
     Image image;
     public Rook(int x, int y, boolean isWhite, Image img) {
         super(x, y, isWhite, img);
+        this.x = x;
+        this.y = y;
+        this.image = img;
         //TODO Auto-generated constructor stub
     }
+
+    public void setX(int currentX) {
+        this.x = currentX;
+    }
+
+    public void setY(int currentY) {
+        this.y = currentY;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public Image getImage() {
+        return this.image;
+    }
+
 
     @Override
     public boolean is_blocked() {

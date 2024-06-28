@@ -3,11 +3,16 @@ package com.genuineappsgroup;
 import javafx.scene.image.Image;
 
 public class Pawn extends Piece {
-    int x, y;
-    int movement_squares;
+    int x;
+    int y;
+    private int movement_squares;
     Image image;
+
     public Pawn(int x, int y, boolean isWhite, Image image) {
         super(x, y, isWhite, image);
+        this.x = x;
+        this.y = y;
+        this.image = image;
     }
 
     @Override
@@ -15,6 +20,14 @@ public class Pawn extends Piece {
         if (!is_opening() && movement_squares > 1) return false;
         else if(is_check() || is_blocked()) return false;
         else return true;
+    }
+
+    public void setX(int currentX) {
+        this.x = currentX;
+    }
+
+    public void setY(int currentY) {
+        this.y = currentY;
     }
 
     public int getX() {
@@ -25,32 +38,27 @@ public class Pawn extends Piece {
         return y;
     }
 
-    public Image getImage()
-    {
-        return image;
+    public Image getImage() {
+        return this.image;
     }
 
     @Override
     public boolean is_blocked() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'is_blocked'");
     }
 
     @Override
     public boolean is_check() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'is_check'");
     }
 
     @Override
     public boolean is_opening() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'is_opening'");
     }
-    
+
     @Override
-    public void move(){
+    public void move() {
         y++;
     }
-    // Additional methods specific to pawn behavior
 }
