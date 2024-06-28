@@ -189,6 +189,9 @@ public class ChessApp extends Application {
         
         //add touch events for white pieces
         pieceTouched(aRook.image, aRook.x, aRook.y, chessboard);
+        pieceTouched(hRook.image, hRook.x, hRook.y, chessboard);
+        pieceTouched(bKnight.image, bKnight.x, bKnight.y, chessboard);
+
 
         //place the white pawns on the board
         placePiece(chessboard, aPawn.image, 0, 6);
