@@ -137,7 +137,9 @@ public class ChessApp extends Application {
          Knight bKnight = new Knight(1, 7, true, whiteKnightImage);
          Knight gKnight = new Knight(6, 7, true, whiteKnightImage);
 
-         
+         //initialize the black knights
+         Knight bKnightBlack = new Knight(1, 0, false, blackKnightImage);
+         Knight gKnightBlack = new Knight(6, 0, false, blackKnightImage);
          
         // Place white pieces
         placePiece(chessboard, aRook.image, aRook.x, aRook.x);
