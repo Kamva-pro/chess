@@ -224,21 +224,21 @@ public class ChessApp extends Application {
         });
     }
 
-    private void placePiece(GridPane chessboard, Image pieceImage, int col, int row) {
-        ImageView pieceView = new ImageView(pieceImage);
-        pieceView.setFitWidth(85);
-        pieceView.setFitHeight(85);
+    private void placePiece(GridPane chessboard, ImageView pieceImage, int col, int row) {
+        
+        pieceImage.setFitWidth(85);
+        pieceImage.setFitHeight(85);
         
         // Add hover effect and cursor change
-        pieceView.setOnMouseEntered(event -> {
-            pieceView.setOpacity(0.5); // Make the piece slightly transparent
-            pieceView.setCursor(Cursor.HAND); // Change cursor to hand
+        pieceImage.setOnMouseEntered(event -> {
+            pieceImage.setOpacity(0.5); // Make the piece slightly transparent
+            pieceImage.setCursor(Cursor.HAND); // Change cursor to hand
         });
-        pieceView.setOnMouseExited(event -> {
-            pieceView.setOpacity(1.0); // Restore original opacity
+        pieceImage.setOnMouseExited(event -> {
+            pieceImage.setOpacity(1.0); // Restore original opacity
         });
 
-        chessboard.add(pieceView, col, row);
+        chessboard.add(pieceImage, col, row);
     }
 
     public static void main(String[] args) {
