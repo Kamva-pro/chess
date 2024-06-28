@@ -3,8 +3,9 @@ package com.genuineappsgroup;
 import javafx.scene.image.Image;
 
 public class Queen extends Piece {
-    int current_x, current_y;
+    int x, y;
     int movement_squares;
+    Image image;
     public Queen(int x, int y, boolean isWhite, Image img) {
         super(x, y, isWhite,img);
         //TODO Auto-generated constructor stub

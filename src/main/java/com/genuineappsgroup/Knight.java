@@ -3,7 +3,9 @@ package com.genuineappsgroup;
 import javafx.scene.image.Image;
 
 public class Knight extends Piece{
-
+    int x, y;
+    int movement_squares;
+    Image image;
     public Knight(int x, int y, boolean isWhite, Image img) {
         super(x, y, isWhite, img);
         //TODO Auto-generated constructor stub
