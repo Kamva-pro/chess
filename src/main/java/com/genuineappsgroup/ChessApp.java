@@ -159,8 +159,8 @@ public class ChessApp extends Application {
          Knight gKnightBlack = new Knight(6, 0, false, blackKnightImageView);
 
          //initialize the white bishops
-         Bishop cBishop = new Bishop(2, 7, true, whiteBishopImage);
-         Bishop fBishop = new Bishop(5, 7, true, whiteBishopImage);
+         Bishop cBishop = new Bishop(2, 7, true, whiteBishopImageView);
+         Bishop fBishop = new Bishop(5, 7, true, whiteBishopImageView);
 
          //initialize the black bishops
 
