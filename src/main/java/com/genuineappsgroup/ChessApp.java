@@ -123,25 +123,24 @@ public class ChessApp extends Application {
         ImageView whiteKingImageView = new ImageView(whiteKingImage);
         ImageView blackKingImageView = new ImageView(blackKingImage);
          //Initialize the white pawns
-         Pawn aPawn = new Pawn(0, 6, true, whitePawnImageView);
-         Pawn bPawn = new Pawn(1, 6, true, whitePawnImageView);
-         Pawn cPawn = new Pawn(2, 6, true, whitePawnImageView);
-         Pawn dPawn = new Pawn(3, 6, true, whitePawnImageView);
-         Pawn ePawn = new Pawn(4, 6, true, whitePawnImageView);
-         Pawn fPawn = new Pawn(5, 6, true, whitePawnImageView);
-         Pawn gPawn = new Pawn(6, 6, true, whitePawnImageView);
-         Pawn hPawn = new Pawn(7, 6, true, whitePawnImageView);
+        Pawn aPawn = new Pawn(0, 6, true, new ImageView(whitePawnImage));
+        Pawn bPawn = new Pawn(1, 6, true, new ImageView(whitePawnImage));
+        Pawn cPawn = new Pawn(2, 6, true, new ImageView(whitePawnImage));
+        Pawn dPawn = new Pawn(3, 6, true, new ImageView(whitePawnImage));
+        Pawn ePawn = new Pawn(4, 6, true, new ImageView(whitePawnImage));
+        Pawn fPawn = new Pawn(5, 6, true, new ImageView(whitePawnImage));
+        Pawn gPawn = new Pawn(6, 6, true, new ImageView(whitePawnImage));
+        Pawn hPawn = new Pawn(7, 6, true, new ImageView(whitePawnImage));
  
          //Initialize the black pawns
-         Pawn aPawnBlack = new Pawn(0, 1, false, blackPawnImageView);
-         Pawn bPawnBlack = new Pawn(1, 1, false, blackPawnImageView);
-         Pawn cPawnBlack = new Pawn(2, 1, false, blackPawnImageView);
-         Pawn dPawnBlack = new Pawn(3, 1, false, blackPawnImageView);
-         Pawn ePawnBlack = new Pawn(4, 1, false, blackPawnImageView);
-         Pawn fPawnBlack = new Pawn(5, 1, false, blackPawnImageView);
-         Pawn gPawnBlack = new Pawn(6, 1, false, blackPawnImageView);
-         Pawn hPawnBlack = new Pawn(7, 1, false, blackPawnImageView);
-
+         Pawn aPawnBlack = new Pawn(0, 1, false, new ImageView(blackPawnImage));
+         Pawn bPawnBlack = new Pawn(1, 1, false, new ImageView(blackPawnImage));
+         Pawn cPawnBlack = new Pawn(2, 1, false, new ImageView(blackPawnImage));
+         Pawn dPawnBlack = new Pawn(3, 1, false, new ImageView(blackPawnImage));
+         Pawn ePawnBlack = new Pawn(4, 1, false, new ImageView(blackPawnImage));
+         Pawn fPawnBlack = new Pawn(5, 1, false, new ImageView(blackPawnImage));
+         Pawn gPawnBlack = new Pawn(6, 1, false, new ImageView(blackPawnImage));
+         Pawn hPawnBlack = new Pawn(7, 1, false, new ImageView(blackPawnImage));
          //initialize the white rooks
          Rook aRook = new Rook(0, 7, true, whiteRookImageView);
          Rook hRook = new Rook(7, 7, true, whiteRookImageView);
