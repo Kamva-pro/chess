@@ -144,6 +144,11 @@ public class ChessApp extends Application {
          //initialize the white bishops
          Bishop cBishop = new Bishop(3, 7, true, whiteBishopImage);
          Bishop fBishop = new Bishop(5, 7, true, whiteBishopImage);
+
+         //initialize the black bishops
+
+         Bishop cBishopBlack = new Bishop(3, 0, false, blackBishopImage);
+         Bishop fBishopBlack = new Bishop(5, 0, false, blackBishopImage);
          
         // Place white pieces
         placePiece(chessboard, aRook.image, aRook.x, aRook.x);
