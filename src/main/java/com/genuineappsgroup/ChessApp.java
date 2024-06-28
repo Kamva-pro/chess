@@ -153,6 +153,10 @@ public class ChessApp extends Application {
 
          //initialize the black queen
          Queen bQueen = new Queen(3, 0, false, blackQueenImage);
+
+         //initialize the kings
+         King wKing = new King(4, 7, true, whiteKingImage);
+         King bKing = new King(4, 0, false, blackKingImage);
          
         // Place white pieces
         placePiece(chessboard, aRook.image, aRook.x, aRook.x);
