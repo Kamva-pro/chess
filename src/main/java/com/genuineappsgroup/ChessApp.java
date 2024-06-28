@@ -194,6 +194,7 @@ public class ChessApp extends Application {
         pieceTouched(gKnight.image, gKnight.x, gKnight.y, chessboard);
         pieceTouched(cBishop.image, cBishop.x, cBishop.y, chessboard);
         pieceTouched(fBishop.image, fBishop.x, fBishop.y, chessboard);
+        pieceTouched(wQueen.image, wQueen.x, wQueen.y, chessboard);
 
 
 
