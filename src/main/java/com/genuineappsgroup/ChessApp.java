@@ -171,7 +171,7 @@ public class ChessApp extends Application {
          Queen wQueen = new Queen(3, 7, true, whiteQueenImageView);
 
          //initialize the black queen
-         Queen bQueen = new Queen(3, 0, false, blackQueenImage);
+         Queen bQueen = new Queen(3, 0, false, blackQueenImageView);
 
          //initialize the kings
          King wKing = new King(4, 7, true, whiteKingImage);
