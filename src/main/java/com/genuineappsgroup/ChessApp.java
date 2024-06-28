@@ -143,8 +143,8 @@ public class ChessApp extends Application {
          Pawn hPawnBlack = new Pawn(7, 1, false, blackPawnImageView);
 
          //initialize the white rooks
-         Rook aRook = new Rook(0, 7, true, whiteRookImage);
-         Rook hRook = new Rook(7, 7, true, whiteRookImage);
+         Rook aRook = new Rook(0, 7, true, whiteRookImageView);
+         Rook hRook = new Rook(7, 7, true, whiteRookImageView);
 
          //initialize the black rooks
          Rook aRookBlack = new Rook(0, 0, false, blackRookImage);
