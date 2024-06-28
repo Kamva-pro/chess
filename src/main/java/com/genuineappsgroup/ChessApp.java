@@ -1,5 +1,7 @@
 package com.genuineappsgroup;
 
+import java.util.Scanner;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
@@ -84,26 +86,6 @@ public class ChessApp extends Application {
     }
 
     private void initializeBoard(GridPane chessboard) {
-        //Initialize the white pawns
-        Pawn aPawn = new Pawn(0, 1, true);
-        Pawn bPawn = new Pawn(1, 1, true);
-        Pawn cPawn = new Pawn(2, 1, true);
-        Pawn dPawn = new Pawn(3, 1, true);
-        Pawn ePawn = new Pawn(4, 1, true);
-        Pawn fPawn = new Pawn(5, 1, true);
-        Pawn gPawn = new Pawn(6, 1, true);
-        Pawn hPawn = new Pawn(7, 1, true);
-
-        //Initialize the black pawns
-        Pawn aPawnBlack = new Pawn(0, 6, false);
-        Pawn bPawnBlack = new Pawn(1, 6, false);
-        Pawn cPawnBlack = new Pawn(2, 6, false);
-        Pawn dPawnBlack = new Pawn(3, 6, false);
-        Pawn ePawnBlack = new Pawn(4, 6, false);
-        Pawn fPawnBlack = new Pawn(5, 6, false);
-        Pawn gPawnBlack = new Pawn(6, 6, false);
-        Pawn hPawnBlack = new Pawn(7, 6, false);
-        
         // Load the piece images
         Image whitePawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-pawn.png").toExternalForm());
         Image blackPawnImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-pawn.png").toExternalForm());
@@ -123,6 +105,27 @@ public class ChessApp extends Application {
         Image whiteKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-king.png").toExternalForm());
         Image blackKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-king.png").toExternalForm());
 
+         //Initialize the white pawns
+         Pawn aPawn = new Pawn(0, 1, true, whitePawnImage);
+         Pawn bPawn = new Pawn(1, 1, true, whitePawnImage);
+         Pawn cPawn = new Pawn(2, 1, true, whitePawnImage);
+         Pawn dPawn = new Pawn(3, 1, true, whitePawnImage);
+         Pawn ePawn = new Pawn(4, 1, true, whitePawnImage);
+         Pawn fPawn = new Pawn(5, 1, true, whitePawnImage);
+         Pawn gPawn = new Pawn(6, 1, true, whitePawnImage);
+         Pawn hPawn = new Pawn(7, 1, true, whitePawnImage);
+ 
+         //Initialize the black pawns
+         Pawn aPawnBlack = new Pawn(0, 6, false, blackPawnImage);
+         Pawn bPawnBlack = new Pawn(1, 6, false, blackPawnImage);
+         Pawn cPawnBlack = new Pawn(2, 6, false, blackPawnImage);
+         Pawn dPawnBlack = new Pawn(3, 6, false, blackPawnImage);
+         Pawn ePawnBlack = new Pawn(4, 6, false, blackPawnImage);
+         Pawn fPawnBlack = new Pawn(5, 6, false, blackPawnImage);
+         Pawn gPawnBlack = new Pawn(6, 6, false, blackPawnImage);
+         Pawn hPawnBlack = new Pawn(7, 6, false, blackPawnImage);
+
+         
         // Place white pieces
         placePiece(chessboard, whiteRookImage, 0, 7);
         placePiece(chessboard, whiteRookImage, 7, 7);
@@ -132,9 +135,17 @@ public class ChessApp extends Application {
         placePiece(chessboard, whiteBishopImage, 5, 7);
         placePiece(chessboard, whiteQueenImage, 3, 7);
         placePiece(chessboard, whiteKingImage, 4, 7);
-        for (int col = 0; col < 8; col++) {
-            placePiece(chessboard, whitePawnImage, col, 6);
-        }
+        
+        //place the white pawns on the board
+        placePiece(chessboard, aPawn.image, aPawn.x, aPawn.y);
+        placePiece(chessboard, bPawn.image, bPawn.x, bPawn.y);
+        placePiece(chessboard, cPawn.image, cPawn.x, cPawn.y);
+        placePiece(chessboard, dPawn.image, dPawn.x, dPawn.y);
+        placePiece(chessboard, ePawn.image, ePawn.x, ePawn.y);
+        placePiece(chessboard, fPawn.image, fPawn.x, fPawn.y);
+        placePiece(chessboard, gPawn.image, gPawn.x, gPawn.y);
+        placePiece(chessboard, hPawn.image, hPawn.x, hPawn.y);
+
 
         // Place black pieces
         placePiece(chessboard, blackRookImage, 0, 0);
@@ -149,6 +160,8 @@ public class ChessApp extends Application {
             placePiece(chessboard, blackPawnImage, col, 1);
         }
     }
+
+    
 
     private void placePiece(GridPane chessboard, Image pieceImage, int col, int row) {
         ImageView pieceView = new ImageView(pieceImage);
@@ -169,5 +182,7 @@ public class ChessApp extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
+        
 }

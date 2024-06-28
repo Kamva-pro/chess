@@ -1,9 +1,11 @@
 package com.genuineappsgroup;
 
+import javafx.scene.image.Image;
+
 public class Rook extends Piece{
 
-    public Rook(int x, int y, boolean isWhite) {
-        super(x, y, isWhite);
+    public Rook(int x, int y, boolean isWhite, Image img) {
+        super(x, y, isWhite, img);
         //TODO Auto-generated constructor stub
     }
 

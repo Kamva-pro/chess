@@ -1,9 +1,12 @@
 package com.genuineappsgroup;
 
+import javafx.scene.image.Image;
+
+
 public class Bishop extends Piece {
 
-    public Bishop(int x, int y, boolean isWhite) {
-        super(x, y, isWhite);
+    public Bishop(int x, int y, boolean isWhite, @SuppressWarnings("exports") Image image) {
+        super(x, y, isWhite, image);
         //TODO Auto-generated constructor stub
     }
 

@@ -1,10 +1,13 @@
 package com.genuineappsgroup;
 
+import javafx.scene.image.Image;
+
 public class Pawn extends Piece {
     int x, y;
     int movement_squares;
-    public Pawn(int x, int y, boolean isWhite) {
-        super(x, y, isWhite);
+    Image image;
+    public Pawn(int x, int y, boolean isWhite, Image image) {
+        super(x, y, isWhite, image);
     }
 
     @Override
@@ -20,6 +23,11 @@ public class Pawn extends Piece {
 
     public int getY() {
         return y;
+    }
+
+    public Image getImage()
+    {
+        return image;
     }
 
     @Override
@@ -42,7 +50,7 @@ public class Pawn extends Piece {
     
     @Override
     public void move(){
-        if (isValidMove(x, y)) move();
+        y++;
     }
     // Additional methods specific to pawn behavior
 }

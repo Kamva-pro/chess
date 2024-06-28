@@ -1,14 +1,18 @@
 package com.genuineappsgroup;
 
+import javafx.scene.image.Image;
+
 public abstract class Piece {
     private int x;
     private int y;
     private boolean isWhite; 
+    private Image image;
 
-    public Piece(int x, int y, boolean isWhite) {
+    public Piece(int x, int y, boolean isWhitem, Image image) {
         this.x = x;
         this.y = y;
         this.isWhite = isWhite;
+        this.image = image;
     }
 
     public abstract boolean is_blocked();
