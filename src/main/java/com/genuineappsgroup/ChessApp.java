@@ -187,6 +187,9 @@ public class ChessApp extends Application {
         placePiece(chessboard, wQueen.image, wQueen.x, wQueen.y);
         placePiece(chessboard, wKing.image, wKing.x, wKing.y);
         
+        //add touch events for white pieces
+        pieceTouched(aRook.image, aRook.x, aRook.y, chessboard);
+
         //place the white pawns on the board
         placePiece(chessboard, aPawn.image, 0, 6);
         placePiece(chessboard, bPawn.image, bPawn.x, bPawn.y);
@@ -216,7 +219,6 @@ public class ChessApp extends Application {
         placePiece(chessboard, gPawnBlack.image, gPawnBlack.x, gPawnBlack.y);
         placePiece(chessboard, hPawnBlack.image, hPawnBlack.x, hPawnBlack.y);
 
-        
     }
 
     private void pieceTouched(ImageView touchedPiece, int x, int y, GridPane chessboard) {
