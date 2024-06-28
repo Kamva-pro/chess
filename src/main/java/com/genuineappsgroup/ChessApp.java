@@ -133,8 +133,8 @@ public class ChessApp extends Application {
          Rook hRookBlack = new Rook(7, 0, false, blackRookImage);
          
         // Place white pieces
-        placePiece(chessboard, whiteRookImage, 0, 7);
-        placePiece(chessboard, whiteRookImage, 7, 7);
+        placePiece(chessboard, aRook.image, aRook.x, aRook.x);
+        placePiece(chessboard, aRook.image, hRook.x, hRook.x);
         placePiece(chessboard, whiteKnightImage, 1, 7);
         placePiece(chessboard, whiteKnightImage, 6, 7);
         placePiece(chessboard, whiteBishopImage, 2, 7);
@@ -153,8 +153,8 @@ public class ChessApp extends Application {
         placePiece(chessboard, hPawn.image, hPawn.x, hPawn.y);
 
         // Place black pieces
-        placePiece(chessboard, blackRookImage, 0, 0);
-        placePiece(chessboard, blackRookImage, 7, 0);
+        placePiece(chessboard, aRookBlack.image, aRookBlack.x, aRookBlack.y);
+        placePiece(chessboard, hRookBlack.image, hRookBlack.x, hRookBlack.y);
         placePiece(chessboard, blackKnightImage, 1, 0);
         placePiece(chessboard, blackKnightImage, 6, 0);
         placePiece(chessboard, blackBishopImage, 2, 0);
