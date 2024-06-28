@@ -191,6 +191,11 @@ public class ChessApp extends Application {
         pieceTouched(aRook.image, aRook.x, aRook.y, chessboard);
         pieceTouched(hRook.image, hRook.x, hRook.y, chessboard);
         pieceTouched(bKnight.image, bKnight.x, bKnight.y, chessboard);
+        pieceTouched(gKnight.image, gKnight.x, gKnight.y, chessboard);
+        pieceTouched(cBishop.image, cBishop.x, cBishop.y, chessboard);
+        pieceTouched(fBishop.image, fBishop.x, fBishop.y, chessboard);
+
+
 
 
         //place the white pawns on the board
