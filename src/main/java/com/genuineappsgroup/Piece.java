@@ -15,6 +15,15 @@ public abstract class Piece {
         this.image = image;
     }
 
+    public int getX(){
+        return x;
+    }
+
+    public int getY()
+    {
+        return y;
+    }
+
     public abstract boolean is_blocked();
     public abstract boolean is_check();
     public abstract boolean is_opening();
