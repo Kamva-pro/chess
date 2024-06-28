@@ -105,23 +105,7 @@ public class ChessApp extends Application {
         Image whiteKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-king.png").toExternalForm());
         Image blackKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-king.png").toExternalForm());
 
-        ImageView whitePawnImageView = new ImageView(whitePawnImage);
-        ImageView blackPawnImageView = new ImageView(blackPawnImage);
-
-        ImageView whiteRookImageView = new ImageView(whiteRookImage);
-        ImageView blackRookImageView = new ImageView(blackRookImage);
-
-        ImageView whiteKnightImageView = new ImageView(whiteKnightImage);
-        ImageView blackKnightImageView = new ImageView(blackKnightImage);
-
-        ImageView whiteBishopImageView = new ImageView(whiteBishopImage);
-        ImageView blackBishopImageView = new ImageView(blackBishopImage);
-
-        ImageView whiteQueenImageView = new ImageView(whiteQueenImage);
-        ImageView blackQueenImageView = new ImageView(blackQueenImage);
-
-        ImageView whiteKingImageView = new ImageView(whiteKingImage);
-        ImageView blackKingImageView = new ImageView(blackKingImage);
+        
          //Initialize the white pawns
         Pawn aPawn = new Pawn(0, 6, true, new ImageView(whitePawnImage));
         Pawn bPawn = new Pawn(1, 6, true, new ImageView(whitePawnImage));
@@ -142,39 +126,39 @@ public class ChessApp extends Application {
          Pawn gPawnBlack = new Pawn(6, 1, false, new ImageView(blackPawnImage));
          Pawn hPawnBlack = new Pawn(7, 1, false, new ImageView(blackPawnImage));
          //initialize the white rooks
-         Rook aRook = new Rook(0, 7, true, whiteRookImageView);
-         Rook hRook = new Rook(7, 7, true, whiteRookImageView);
+         Rook aRook = new Rook(0, 7, true, new ImageView(whiteRookImage));
+         Rook hRook = new Rook(7, 7, true, new ImageView(whiteRookImage));
 
          //initialize the black rooks
-         Rook aRookBlack = new Rook(0, 0, false, blackRookImageView);
-         Rook hRookBlack = new Rook(7, 0, false, blackRookImageView);
+         Rook aRookBlack = new Rook(0, 0, false, new ImageView(blackRookImage));
+         Rook hRookBlack = new Rook(7, 0, false, new ImageView(blackRookImage));
 
          //initialize the white knights
-         Knight bKnight = new Knight(1, 7, true, whiteKnightImageView);
-         Knight gKnight = new Knight(6, 7, true, whiteKnightImageView);
+         Knight bKnight = new Knight(1, 7, true, new ImageView(whiteKnightImage));
+         Knight gKnight = new Knight(6, 7, true, new ImageView(whiteKnightImage));
 
          //initialize the black knights
-         Knight bKnightBlack = new Knight(1, 0, false, blackKnightImageView);
-         Knight gKnightBlack = new Knight(6, 0, false, blackKnightImageView);
+         Knight bKnightBlack = new Knight(1, 0, false, new ImageView(blackKnightImage));
+         Knight gKnightBlack = new Knight(6, 0, false, new ImageView(blackKnightImage));
 
          //initialize the white bishops
-         Bishop cBishop = new Bishop(2, 7, true, whiteBishopImageView);
-         Bishop fBishop = new Bishop(5, 7, true, whiteBishopImageView);
+         Bishop cBishop = new Bishop(2, 7, true, new ImageView(whiteBishopImage));
+         Bishop fBishop = new Bishop(5, 7, true, new ImageView(whiteBishopImage));
 
          //initialize the black bishops
 
-         Bishop cBishopBlack = new Bishop(2, 0, false, blackBishopImageView);
-         Bishop fBishopBlack = new Bishop(5, 0, false, blackBishopImageView);
+         Bishop cBishopBlack = new Bishop(2, 0, false, new ImageView(blackBishopImage));
+         Bishop fBishopBlack = new Bishop(5, 0, false, new ImageView(blackBishopImage));
 
          //initialize the white queen
-         Queen wQueen = new Queen(3, 7, true, whiteQueenImageView);
+         Queen wQueen = new Queen(3, 7, true, new ImageView(whiteQueenImage));
 
          //initialize the black queen
-         Queen bQueen = new Queen(3, 0, false, blackQueenImageView);
+         Queen bQueen = new Queen(3, 0, false, new ImageView(blackQueenImage));
 
          //initialize the kings
-         King wKing = new King(4, 7, true, whiteKingImageView);
-         King bKing = new King(4, 0, false, blackKingImageView);
+         King wKing = new King(4, 7, true, new ImageView(whiteKingImage));
+         King bKing = new King(4, 0, false, new ImageView(blackKingImage));
          
         // Place white pieces
         placePiece(chessboard, aRook.image, aRook.x, aRook.y);
