@@ -1,14 +1,15 @@
 package com.genuineappsgroup;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Pawn extends Piece {
     int x;
     int y;
     private int movement_squares;
-    Image image;
+    ImageView image;
 
-    public Pawn(int x, int y, boolean isWhite, Image image) {
+    public Pawn(int x, int y, boolean isWhite, ImageView image) {
         super(x, y, isWhite, image);
         this.x = x;
         this.y = y;
@@ -38,7 +39,7 @@ public class Pawn extends Piece {
         return y;
     }
 
-    public Image getImage() {
+    public ImageView getImage() {
         return this.image;
     }
 

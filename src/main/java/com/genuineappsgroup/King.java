@@ -1,13 +1,14 @@
 package com.genuineappsgroup;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class King extends Piece {
     int x, y;
     int movement_squares;
-    Image image;
+    ImageView image;
     boolean isWhite;
-    public King(int x, int y, boolean isWhite, Image image) {
+    public King(int x, int y, boolean isWhite, ImageView image) {
         super(x, y, isWhite, image);
         this.x = x;
         this.y = y;
@@ -30,7 +31,7 @@ public class King extends Piece {
         return y;
     }
 
-    public Image getImage() {
+    public ImageView getImage() {
         return this.image;
     }
 
