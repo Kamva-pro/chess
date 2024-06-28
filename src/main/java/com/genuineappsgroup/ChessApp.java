@@ -133,14 +133,14 @@ public class ChessApp extends Application {
          Pawn hPawn = new Pawn(7, 6, true, whitePawnImageView);
  
          //Initialize the black pawns
-         Pawn aPawnBlack = new Pawn(0, 1, false, blackPawnImage);
-         Pawn bPawnBlack = new Pawn(1, 1, false, blackPawnImage);
-         Pawn cPawnBlack = new Pawn(2, 1, false, blackPawnImage);
-         Pawn dPawnBlack = new Pawn(3, 1, false, blackPawnImage);
-         Pawn ePawnBlack = new Pawn(4, 1, false, blackPawnImage);
-         Pawn fPawnBlack = new Pawn(5, 1, false, blackPawnImage);
-         Pawn gPawnBlack = new Pawn(6, 1, false, blackPawnImage);
-         Pawn hPawnBlack = new Pawn(7, 1, false, blackPawnImage);
+         Pawn aPawnBlack = new Pawn(0, 1, false, blackPawnImageView);
+         Pawn bPawnBlack = new Pawn(1, 1, false, blackPawnImageView);
+         Pawn cPawnBlack = new Pawn(2, 1, false, blackPawnImageView);
+         Pawn dPawnBlack = new Pawn(3, 1, false, blackPawnImageView);
+         Pawn ePawnBlack = new Pawn(4, 1, false, blackPawnImageView);
+         Pawn fPawnBlack = new Pawn(5, 1, false, blackPawnImageView);
+         Pawn gPawnBlack = new Pawn(6, 1, false, blackPawnImageView);
+         Pawn hPawnBlack = new Pawn(7, 1, false, blackPawnImageView);
 
          //initialize the white rooks
          Rook aRook = new Rook(0, 7, true, whiteRookImage);
