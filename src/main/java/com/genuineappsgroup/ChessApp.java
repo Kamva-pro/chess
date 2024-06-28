@@ -140,6 +140,10 @@ public class ChessApp extends Application {
          //initialize the black knights
          Knight bKnightBlack = new Knight(1, 0, false, blackKnightImage);
          Knight gKnightBlack = new Knight(6, 0, false, blackKnightImage);
+
+         //initialize the white bishops
+         Bishop cBishop = new Bishop(3, 7, true, whiteBishopImage);
+         Bishop fBishop = new Bishop(5, 7, true, whiteBishopImage);
          
         // Place white pieces
         placePiece(chessboard, aRook.image, aRook.x, aRook.x);
