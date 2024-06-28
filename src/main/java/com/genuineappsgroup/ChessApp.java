@@ -216,16 +216,28 @@ public class ChessApp extends Application {
         placePiece(chessboard, gPawnBlack.image, gPawnBlack.x, gPawnBlack.y);
         placePiece(chessboard, hPawnBlack.image, hPawnBlack.x, hPawnBlack.y);
 
+        
     }
 
-     void pieceTouched(ImageView touchedPiece, int x, int y){
+    private void pieceTouched(ImageView touchedPiece, int x, int y, GridPane chessboard) {
         touchedPiece.setOnTouchPressed((TouchEvent event) -> {
-
+            // Change the color of the square the piece is on
+            Rectangle square = getSquare(chessboard, x, y);
+            if (square != null) {
+                square.setFill(Color.LIGHTBLUE);
+            }
         });
     }
 
+    private Rectangle getSquare(GridPane chessboard, int x, int y) {
+        for (javafx.scene.Node node : chessboard.getChildren()) {
+            if (GridPane.getColumnIndex(node) == x && GridPane.getRowIndex(node) == y && node instanceof Rectangle) {
+                return (Rectangle) node;
+            }
+        }
+        return null;
+    }
     private void placePiece(GridPane chessboard, ImageView pieceImage, int col, int row) {
-        
         pieceImage.setFitWidth(85);
         pieceImage.setFitHeight(85);
         
