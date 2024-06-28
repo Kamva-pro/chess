@@ -129,7 +129,8 @@ public class ChessApp extends Application {
          Rook aRook = new Rook(0, 7, true, whiteRookImage);
          Rook hRook = new Rook(7, 7, true, whiteRookImage);
 
-         
+         Rook aRookBlack = new Rook(0, 0, false, blackRookImage);
+         Rook hRookBlack = new Rook(7, 0, false, blackRookImage);
          
         // Place white pieces
         placePiece(chessboard, whiteRookImage, 0, 7);
