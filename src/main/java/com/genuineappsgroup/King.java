@@ -3,8 +3,10 @@ package com.genuineappsgroup;
 import javafx.scene.image.Image;
 
 public class King extends Piece {
-    int current_x, current_y;
+    int x, y;
     int movement_squares;
+    Image image;
+    boolean isWhite;
     public King(int x, int y, boolean isWhite, Image image) {
         super(x, y, isWhite, image);
     }
