@@ -105,6 +105,23 @@ public class ChessApp extends Application {
         Image whiteKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/white-king.png").toExternalForm());
         Image blackKingImage = new Image(getClass().getResource("/com/genuineappsgroup/pieces/black-king.png").toExternalForm());
 
+        ImageView whitePawnImageView = new ImageView(whitePawnImage);
+        ImageView blackPawnImageView = new ImageView(blackPawnImage);
+
+        ImageView whiteRookImageView = new ImageView(whiteRookImage);
+        ImageView blackRookImageView = new ImageView(blackRookImage);
+
+        ImageView whiteKnightImageView = new ImageView(whiteKnightImage);
+        ImageView blackKnightImageView = new ImageView(blackKnightImage);
+
+        ImageView whiteBishopImageView = new ImageView(whiteBishopImage);
+        ImageView blackBishopImageView = new ImageView(blackBishopImage);
+
+        ImageView whiteQueenImageView = new ImageView(whiteQueenImage);
+        ImageView blackQueenImageView = new ImageView(blackQueenImage);
+
+        ImageView whiteKingImageView = new ImageView(whiteKingImage);
+        ImageView blackKingImageView = new ImageView(blackKingImage);
          //Initialize the white pawns
          Pawn aPawn = new Pawn(0, 6, true, whitePawnImage);
          Pawn bPawn = new Pawn(1, 6, true, whitePawnImage);
