@@ -125,6 +125,11 @@ public class ChessApp extends Application {
          Pawn gPawnBlack = new Pawn(6, 6, false, blackPawnImage);
          Pawn hPawnBlack = new Pawn(7, 6, false, blackPawnImage);
 
+         //initialize the white rooks
+         Rook aRook = new Rook(0, 7, true, whiteRookImage);
+         Rook hRook = new Rook(7, 7, true, whiteRookImage);
+
+         
          
         // Place white pieces
         placePiece(chessboard, whiteRookImage, 0, 7);
@@ -145,8 +150,6 @@ public class ChessApp extends Application {
         placePiece(chessboard, fPawn.image, fPawn.x, fPawn.y);
         placePiece(chessboard, gPawn.image, gPawn.x, gPawn.y);
         placePiece(chessboard, hPawn.image, hPawn.x, hPawn.y);
-
-
 
         // Place black pieces
         placePiece(chessboard, blackRookImage, 0, 0);
