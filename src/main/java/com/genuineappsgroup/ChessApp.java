@@ -149,7 +149,7 @@ public class ChessApp extends Application {
          Bishop fBishopBlack = new Bishop(5, 0, false, blackBishopImage);
 
          //initialize the white queen
-         Queen wQueen = new Queen(3, 6, true, whiteQueenImage);
+         Queen wQueen = new Queen(3, 7, true, whiteQueenImage);
 
          //initialize the black queen
          Queen bQueen = new Queen(3, 0, false, blackQueenImage);
@@ -161,7 +161,7 @@ public class ChessApp extends Application {
         placePiece(chessboard, gKnight.image, gKnight.x, gKnight.y);
         placePiece(chessboard, cBishop.image, cBishop.x, cBishop.y);
         placePiece(chessboard, fBishop.image, fBishop.x, fBishop.y);
-        placePiece(chessboard, whiteQueenImage, 3, 7);
+        placePiece(chessboard, wQueen.image, wQueen.x, wQueen.y);
         placePiece(chessboard, whiteKingImage, 4, 7);
         
         //place the white pawns on the board
@@ -181,7 +181,7 @@ public class ChessApp extends Application {
         placePiece(chessboard, gKnightBlack.image, gKnightBlack.x, gKnightBlack.y);
         placePiece(chessboard, cBishopBlack.image, cBishopBlack.x, cBishopBlack.y);
         placePiece(chessboard, fBishopBlack.image, fBishopBlack.x, fBishopBlack.y);
-        placePiece(chessboard, blackQueenImage, 3, 0);
+        placePiece(chessboard, bQueen.image, bQueen.x, bQueen.y);
         placePiece(chessboard, blackKingImage, 4, 0);
     
         placePiece(chessboard, aPawnBlack.image, aPawnBlack.x, aPawnBlack.y);
