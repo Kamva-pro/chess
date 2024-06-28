@@ -1,7 +1,5 @@
 package com.genuineappsgroup;
 
-import java.util.Scanner;
-
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
@@ -175,8 +173,8 @@ public class ChessApp extends Application {
         placePiece(chessboard, hRookBlack.image, hRookBlack.x, hRookBlack.y);
         placePiece(chessboard, bKnightBlack.image, bKnightBlack.x, bKnightBlack.y);
         placePiece(chessboard, gKnightBlack.image, gKnightBlack.x, gKnightBlack.y);
-        placePiece(chessboard, blackBishopImage, 2, 0);
-        placePiece(chessboard, blackBishopImage, 5, 0);
+        placePiece(chessboard, cBishopBlack.image, cBishopBlack.x, cBishopBlack.y);
+        placePiece(chessboard, fBishopBlack.image, fBishopBlack.x, fBishopBlack.y);
         placePiece(chessboard, blackQueenImage, 3, 0);
         placePiece(chessboard, blackKingImage, 4, 0);
     
