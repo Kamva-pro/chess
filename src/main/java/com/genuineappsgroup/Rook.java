@@ -1,12 +1,13 @@
 package com.genuineappsgroup;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Rook extends Piece{
     int x, y;
     int movement_squares;
-    Image image;
-    public Rook(int x, int y, boolean isWhite, Image img) {
+    ImageView image;
+    public Rook(int x, int y, boolean isWhite, ImageView img) {
         super(x, y, isWhite, img);
         this.x = x;
         this.y = y;
@@ -30,7 +31,7 @@ public class Rook extends Piece{
         return y;
     }
 
-    public Image getImage() {
+    public ImageView getImage() {
         return this.image;
     }
 

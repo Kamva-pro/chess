@@ -17,6 +17,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import javafx.scene.input.TouchEvent;
+
 
 public class ChessApp extends Application {
 
@@ -199,7 +201,11 @@ public class ChessApp extends Application {
 
     }
 
-    
+     void pieceTouched(ImageView touchedPiece, int x, int y){
+        touchedPiece.setOnTouchPressed((TouchEvent event) -> {
+
+        });
+    }
 
     private void placePiece(GridPane chessboard, Image pieceImage, int col, int row) {
         ImageView pieceView = new ImageView(pieceImage);

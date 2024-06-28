@@ -1,14 +1,15 @@
 package com.genuineappsgroup;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public abstract class Piece {
     private int x;
     private int y;
     private boolean isWhite; 
-    private Image image;
+    private ImageView image;
 
-    public Piece(int x, int y, boolean isWhitem, Image image) {
+    public Piece(int x, int y, boolean isWhitem, ImageView image) {
         this.x = x;
         this.y = y;
         this.isWhite = isWhite;
@@ -34,7 +35,7 @@ public abstract class Piece {
         return this.y;
     }
 
-    public Image getImage()
+    public ImageView getImage()
     {
         return this.image;
     }
