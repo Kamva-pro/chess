@@ -123,14 +123,14 @@ public class ChessApp extends Application {
         ImageView whiteKingImageView = new ImageView(whiteKingImage);
         ImageView blackKingImageView = new ImageView(blackKingImage);
          //Initialize the white pawns
-         Pawn aPawn = new Pawn(0, 6, true, whitePawnImage);
-         Pawn bPawn = new Pawn(1, 6, true, whitePawnImage);
-         Pawn cPawn = new Pawn(2, 6, true, whitePawnImage);
-         Pawn dPawn = new Pawn(3, 6, true, whitePawnImage);
-         Pawn ePawn = new Pawn(4, 6, true, whitePawnImage);
-         Pawn fPawn = new Pawn(5, 6, true, whitePawnImage);
-         Pawn gPawn = new Pawn(6, 6, true, whitePawnImage);
-         Pawn hPawn = new Pawn(7, 6, true, whitePawnImage);
+         Pawn aPawn = new Pawn(0, 6, true, whitePawnImageView);
+         Pawn bPawn = new Pawn(1, 6, true, whitePawnImageView);
+         Pawn cPawn = new Pawn(2, 6, true, whitePawnImageView);
+         Pawn dPawn = new Pawn(3, 6, true, whitePawnImageView);
+         Pawn ePawn = new Pawn(4, 6, true, whitePawnImageView);
+         Pawn fPawn = new Pawn(5, 6, true, whitePawnImageView);
+         Pawn gPawn = new Pawn(6, 6, true, whitePawnImageView);
+         Pawn hPawn = new Pawn(7, 6, true, whitePawnImageView);
  
          //Initialize the black pawns
          Pawn aPawnBlack = new Pawn(0, 1, false, blackPawnImage);
