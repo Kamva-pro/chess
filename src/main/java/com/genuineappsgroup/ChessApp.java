@@ -59,7 +59,7 @@ public class ChessApp extends Application {
         GridPane chessboard = new GridPane();
         for (int row = 0; row < 8; row++) {
             for (int col = 0; col < 8; col++) {
-                Rectangle square = new Rectangle(93, 93, (row + col) % 2 == 0 ? Color.BEIGE : Color.YELLOWGREEN);
+                Rectangle square = new Rectangle(87, 93, (row + col) % 2 == 0 ? Color.BEIGE : Color.YELLOWGREEN);
                 chessboard.add(square, col, row);
             }
         }
@@ -196,7 +196,7 @@ public class ChessApp extends Application {
 
 
         //place the white pawns on the board
-        placePiece(chessboard, aPawn.image, 0, 6);
+        placePiece(chessboard, aPawn.image, aPawn.x, aPawn.y);
         placePiece(chessboard, bPawn.image, bPawn.x, bPawn.y);
         placePiece(chessboard, cPawn.image, cPawn.x, cPawn.y);
         placePiece(chessboard, dPawn.image, dPawn.x, dPawn.y);
@@ -224,15 +224,29 @@ public class ChessApp extends Application {
         placePiece(chessboard, gPawnBlack.image, gPawnBlack.x, gPawnBlack.y);
         placePiece(chessboard, hPawnBlack.image, hPawnBlack.x, hPawnBlack.y);
 
+        aPawn.image.setOnMouseDragged(e -> {
+            aPawn.image.setX(e.getX());
+            aPawn.image.setY(e.getY());
+            System.out.println("A Pawn dragged");
+        });
+
     }
 
     private void pieceTouched(ImageView touchedPiece, int x, int y, GridPane chessboard) {
-        touchedPiece.setOnTouchPressed((TouchEvent event) -> {
-            // Change the color of the square the piece is on
+        // touchedPiece.setOnTouchPressed((TouchEvent event) -> {
+        //     // Change the color of the square the piece is on
+        //     
+        // });
+
+        touchedPiece.setOnMouseClicked(event -> {
+            System.out.println(touchedPiece + " clicked");
             Rectangle square = getSquare(chessboard, x, y);
+
             if (square != null) {
-                square.setFill(Color.LIGHTBLUE);
+                        square.setFill(Color.LIGHTBLUE);
             }
+            
+
         });
     }
 
@@ -257,6 +271,7 @@ public class ChessApp extends Application {
             pieceImage.setOpacity(1.0); // Restore original opacity
         });
 
+    
         chessboard.add(pieceImage, col, row);
     }
 
