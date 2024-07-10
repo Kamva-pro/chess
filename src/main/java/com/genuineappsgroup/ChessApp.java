@@ -67,18 +67,18 @@ public class ChessApp extends Application {
         initializeBoard(chessboard);
 
         // Create labels
-        Label gameNameLabel = new Label("Chess Game");
-        gameNameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 48));
+        Label gameNameLabel = new Label("Chess App");
+        gameNameLabel.setFont(Font.font("Montserrat", FontWeight.BOLD, 60));
         Label player1Label = new Label("Player 1: " + playerOneName);
-        player1Label.setFont(Font.font("Arial", 24));
+        player1Label.setFont(Font.font("Montserrat", 24));
         Label player2Label = new Label("Player 2: " + playerTwoName);
-        player2Label.setFont(Font.font("Arial", 24));
+        player2Label.setFont(Font.font("Montserrat", 24));
 
         // Create a VBox to hold the labels
         VBox infoBox = new VBox(10, gameNameLabel, player1Label, player2Label);
         infoBox.setPadding(new Insets(20));
         infoBox.setLayoutX(750);  // Position to the right of the chessboard
-        infoBox.setLayoutY(100);  // Position a bit down from the top
+        infoBox.setLayoutY(50);  // Position a bit down from the top
 
         root.getChildren().addAll(chessboard, infoBox);
         primaryStage.setScene(scene);
@@ -192,7 +192,6 @@ public class ChessApp extends Application {
 
 
         //add touch events for black pieces
-
 
 
         //place the white pawns on the board
