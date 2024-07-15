@@ -254,39 +254,40 @@ public class ChessApp extends Application {
         return null;
     }
     private void placePiece(GridPane chessboard, ImageView pieceImage, int col, int row) {
-        pieceImage.setFitWidth(85);
-        pieceImage.setFitHeight(85);
-    
-        // Mouse entered and exited events for visual feedback
-        pieceImage.setOnMouseEntered(event -> {
-            pieceImage.setOpacity(0.5);
-            pieceImage.setCursor(Cursor.HAND);
-        });
-        pieceImage.setOnMouseExited(event -> {
-            pieceImage.setOpacity(1.0);
-        });
-    
-        // Add drag and drop functionality
-        pieceImage.setOnMousePressed(event -> {
-            pieceImage.setCursor(Cursor.MOVE);
-        });
-        pieceImage.setOnMouseDragged(event -> {
-            pieceImage.setX(event.getSceneX() - 42.5);
-            pieceImage.setY(event.getSceneY() - 42.5);
-        });
-        pieceImage.setOnMouseReleased(event -> {
-            int newCol = (int) (event.getSceneX() / 93);
-            int newRow = (int) (event.getSceneY() / 93);
-            GridPane.setColumnIndex(pieceImage, newCol);
-            GridPane.setRowIndex(pieceImage, newRow);
-            pieceImage.setX(0);
-            pieceImage.setY(0);
-            pieceImage.setCursor(Cursor.HAND);
-        });
-    
-        chessboard.add(pieceImage, col, row);
-    }
-    
+    pieceImage.setFitWidth(85);
+    pieceImage.setFitHeight(85);
+
+    // Mouse entered and exited events for visual feedback
+    pieceImage.setOnMouseEntered(event -> {
+        pieceImage.setOpacity(0.5);
+        pieceImage.setCursor(Cursor.HAND);
+    });
+    pieceImage.setOnMouseExited(event -> {
+        pieceImage.setOpacity(1.0);
+    });
+
+    // Add drag and drop functionality
+    pieceImage.setOnMousePressed(event -> {
+        pieceImage.setCursor(Cursor.MOVE);
+    });
+    pieceImage.setOnMouseDragged(event -> {
+        pieceImage.setX(event.getSceneX() - 42.5);
+        
+        pieceImage.setY(event.getSceneY() - 42.5);
+    });
+    pieceImage.setOnMouseReleased(event -> {
+        int newCol = (int) (event.getSceneX() / 93);
+        int newRow = (int) (event.getSceneY() / 93);
+        GridPane.setColumnIndex(pieceImage, newCol);
+        GridPane.setRowIndex(pieceImage, newRow);
+        pieceImage.setX(0);
+        pieceImage.setY(0);
+        pieceImage.setCursor(Cursor.HAND);
+    });
+
+    chessboard.add(pieceImage, col, row);
+}
+
 
     public static void main(String[] args) {
         launch(args);
