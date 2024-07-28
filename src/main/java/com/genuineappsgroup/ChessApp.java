@@ -201,6 +201,15 @@ public class ChessApp extends Application {
         pieceTouched(bQueen.image, bQueen.x, bQueen.y, chessboard);
         pieceTouched(bKing.image, bKing.x, bKing.y, chessboard);
 
+        //add touch events for the pawns
+        pieceTouched(aPawnBlack.image, aPawnBlack.x, aPawnBlack.y, chessboard);
+        pieceTouched(bPawnBlack.image, bPawnBlack.x, bPawnBlack.y, chessboard);
+        pieceTouched(cPawnBlack.image, cPawnBlack.x, cPawnBlack.y, chessboard);
+        pieceTouched(dPawnBlack.image, dPawnBlack.x, dPawnBlack.y, chessboard);
+        pieceTouched(ePawnBlack.image, ePawnBlack.x, ePawnBlack.y, chessboard);
+        pieceTouched(fPawnBlack.image, fPawnBlack.x, fPawnBlack.y, chessboard);
+        pieceTouched(gPawnBlack.image, gPawnBlack.x, gPawnBlack.y, chessboard);
+        pieceTouched(hPawnBlack.image, hPawnBlack.x, hPawnBlack.y, chessboard);
 
         //place the white pawns on the board
         placePiece(chessboard, aPawn.image, aPawn.x, aPawn.y);
