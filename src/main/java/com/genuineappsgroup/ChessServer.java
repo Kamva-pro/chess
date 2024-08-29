@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class ChessServer implements Runnable {
     private String clientMachine;
@@ -26,12 +28,13 @@ public class ChessServer implements Runnable {
             String messageFromClient;
             while((messageFromClient = in.readLine()) != null)
             {
+                JSOb
 
             }
         }
     }catch(IOException exception)
     {
-        
+
     }
     }
 
