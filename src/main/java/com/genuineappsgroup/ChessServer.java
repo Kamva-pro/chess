@@ -1,41 +1,40 @@
 package com.genuineappsgroup;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.net.Socket;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import java.io.*;
+import java.net.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+import com.genuineappsgroup.ClientHandler;
+public class ChessServer {
 
-public class ChessServer implements Runnable {
-    private String clientMachine;
-    private BufferedReader in;
-    private PrintStream out;
-    
+    private static final int PORT = 6000;
+    private static Socket player1Socket;
+    private static Socket player2Socket;
 
-    public void SimpleServer(Socket socket) throws IOException {
-        clientMachine = socket.getInetAddress().getHostName();
-        out = new PrintStream(socket.getOutputStream());
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-    }
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
 
-    @Override
-    public void run() {
-        try{
+        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
+            System.out.println("Chess server started on port " + PORT);
 
-         while(true){
-            String messageFromClient;
-            while((messageFromClient = in.readLine()) != null)
-            {
-                JSOb
-
+            while (true) {
+                if (player1Socket == null) {
+                    player1Socket = serverSocket.accept();
+                    executor.execute(new ClientHandler(player1Socket, "White"));
+                } else if (player2Socket == null) {
+                    player2Socket = serverSocket.accept();
+                    executor.execute(new ClientHandler(player2Socket, "Black"));
+                } else {
+                    System.out.println("Both players have joined, starting the game...");
+                    break;
+                }
             }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            executor.shutdown();
         }
-    }catch(IOException exception)
-    {
-
     }
-    }
-
 }
+
