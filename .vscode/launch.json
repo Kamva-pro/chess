@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ChessServer",
+            "request": "launch",
+            "mainClass": "com.genuineappsgroup/com.genuineappsgroup.ChessServer",
+            "projectName": "chess"
+        },
+        {
+            "type": "java",
             "name": "DragExample",
             "request": "launch",
             "mainClass": "com.genuineappsgroup/com.genuineappsgroup.DragExample",
